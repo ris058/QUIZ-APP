@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<div class="container">
+        <!-- static/images/pic1.jpg -->
+        <img src="{{ url_for('static', filename='images/pic1.jpg') }}" alt="Quiz App" class="welcome-img">
+
+<body style="text-align:center; font-family: Arial;">
+    <h2>Welcome, {{ username }} 🎉</h2>
+    <a href="{{ url_for('leaderboard') }}" class="btn">View Leaderboard</a>
+    <p>Get ready to test your General Knowledge!</p>
+    <br>
+    <a href="{{ url_for('quiz', q_index=0) }}">
+        <button style="padding:10px 20px; font-size:16px;">Start Quiz</button>
+    </a>
+    <br><br>
+    <a href="{{ url_for('logout') }}"><button>Logout</button></a>
+</body>
+</html>
